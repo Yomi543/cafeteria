@@ -1,0 +1,122 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* Encabezado */
+header {
+    background-color: #ae74a7;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 49px;
+    font-family: "Cream Peach";
+}
+
+
+/* Navegación */
+nav {
+    background-color: #D9EDFC;
+    color: #fff;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+/* Sección de Menú */
+.menu-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Contacto */
+.contact-section {
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+
+    background-color: #a497ba;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.boton-sus {
+    margin-top: 10px;
+    color: #B352C7;
+    border: none;
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #FCD1EE;
+    border-radius: 6px;
+}
+
+td{
+    padding: 3px;
+}
+.articulo
+{
+    font-family: "Malgun Gothic";
+    font-size: 18px;
+    width: 60%;
+    margin: 0 auto;
+}
+.horarios{
+    text-align: center;
+}
+.horarios table {
+    margin: 0 auto;
+    width: 15%;
+}
+.dias {
+    text-align: left;
+}
+.horas{
+    text-align: right;
+}
+
+h2{
+    font-family: "Cream Peach";
+    font-size: 40px;
+}
+ul.sin-puntos {
+    list-style-type: none;
+}
+
+ul.sin-puntos li {
+    /* Agrega estilos adicionales si lo deseas */
+    margin: 0; /* Elimina el espacio entre elementos */
+    text-align: auto;
+    font-family: "Malgun Gothic";
+}
+
+
