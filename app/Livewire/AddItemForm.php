@@ -2,8 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Helpers\CarritoCompras;
 use App\Models\Product;
-use Gloudemans\Shoppingcart\Cart;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -13,6 +13,9 @@ class AddItemForm extends Component
     public $cantidad = 1;
     public $subtotal;
 
+    protected $rules = [
+        "cantidad"=>"required|int|min:1"
+    ];
 
     public function calculaSubtotal(){
         $this -> subtotal = $this ->cantidad*$this->product->precio;
@@ -32,12 +35,14 @@ class AddItemForm extends Component
         $user = Auth::user();
         $userID = $user->id;
         try{
-            \Cart::session($userID)->add(array(
-                'id' => $this->product->id,
-                'name' => $this->product->nombre,
-                'price' => $this->product->precio,
-                'quantity' => $this->cantidad,
-            ));
+            $this ->validate();
+            $carrito = new CarritoCompras();
+            $carrito ->AddToCart(
+                $this -> product -> id,
+                $this->product->nombre,
+                $this->cantidad,
+                $this->product->precio
+            );
             $this -> dispatch("saved");
         }catch (\Exception $e){
             $this -> dispatch("save_error");

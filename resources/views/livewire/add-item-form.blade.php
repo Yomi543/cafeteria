@@ -10,6 +10,7 @@
             </x-slot>
 
             <x-slot name="form">
+                <input type="hidden" wire:model.blur="">
                 <!-- Name -->
                 <!-- Imagen -->
                 <div class="col-span-6 sm:col-span-4">

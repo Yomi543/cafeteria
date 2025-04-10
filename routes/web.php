@@ -1,5 +1,9 @@
 <?php
 
+use App\Helpers\CarritoCompras;
+use App\Http\Controllers\VentasController;
+use App\Models\ItemInSale;
+use App\Models\Sale;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 
@@ -76,13 +80,39 @@ Route::group(['middleware' => ['can:realizar_compra']], function(){
         Route::get('/add/{id}', function () {
             return view('sales.add-item-cart');
         })->name('add-to-cart');
-    });
-});
 
-Route::group(['middleware' => ['can:realizar_compra']], function(){
-    Route::prefix('cart')->group(function () {
         Route::get('/', function () {
             return view('sales.ver-carrito');
         })->name('view-cart');
+
+
+        Route::get('/empty', function () {
+            $carrito = new CarritoCompras();
+            $carrito -> emptyCart();
+            return redirect("/");
+        })->name('empty-cart');
+
+        Route::get('/sale', VentasController::class)->name('saleCart');
+
+        Route::get('/showSale/{id}', function ($id) {
+
+            $sale = Sale::find($id);
+//            dd($sale);
+
+            $items = $sale->items;
+            $total = 0;
+
+            foreach ($items as $item){
+                $cantidad = $item -> pivot ->cantidad;
+                $precio = $item -> pivot -> precio;
+                $total+= $cantidad*$precio;
+            }
+
+            return view('sales.ver-venta-view', [
+                "items"=>$items,
+                "total"=>$total
+            ]);
+        })->name('view-sale');
     });
+
 });

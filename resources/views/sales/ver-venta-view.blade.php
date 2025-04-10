@@ -10,11 +10,11 @@
     @foreach($items as $item)
         <tr style="border-bottom: 1px solid #ddd;">
             <td style="padding: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;">
-                <img src="{{ asset('storage/' . $item['image']) }}" alt="Imagen de {{ $item['name'] }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
-                <span>{{ $item["name"] }}</span>
+                <img src="{{ asset('storage/' . $item['imagen']) }}" alt="Imagen de {{ $item['name'] }}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;">
+                <span>{{ $item["nombre"] }}</span>
             </td>
-            <td style="padding: 10px;">{{ $item["price"] }}</td>
-            <td style="padding: 10px;">{{ $item["amount"] }}</td>
+            <td style="padding: 10px;">{{ $item["precio"] }}</td>
+            <td style="padding: 10px;">{{ $item["cantidad"] }}</td>
         </tr>
     @endforeach
     <tr style="border-bottom: 1px solid #ddd;">
@@ -24,17 +24,8 @@
         <td style="padding: 10px;"></td>
         <td style="padding: 10px;"> $ {{ $total }}</td>
     </tr>
-    <tr style="border-bottom: 1px solid #ddd;">
-        <td style="padding: 10px; display: flex; align-items: center; gap: 10px; justify-content: center;" colspan="3">
-            <a href="{{route("saleCart")}}">
-                <x-button>
-                    {{__("COMPRAR")}}
-                </x-button>
-            </a>
-
-        </td>
-    </tr>
     </tbody>
 </table>
+
 
 
