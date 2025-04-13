@@ -30,7 +30,7 @@ class EditImageForm extends Component
     public function update(){
         try {
             $this -> validate();
-            $path = $this->image->storePublicly("imagen/products","public");
+            $path = $this->image->storePublicly("images/products","public");
             $this -> product -> update([
                 'imagen'=>$path
             ]);
