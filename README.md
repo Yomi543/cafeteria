@@ -51,8 +51,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
+Thank you for considering contributing to `the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+`
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
@@ -64,3 +64,70 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Seeders del Proyecto
+
+**Estructura de los Seeders:**
+
+
+Se estructuraron y ajustaron los seeders para poblar la base de datos con datos relevantes al funcionamiento de la aplicación. Se crearon/modificaron los siguientes archivos:
+
+AdminSeeder.php: Crea 2 usuarios con rol de administrador.
+
+ClientSeeder.php: Crea 2 usuarios con rol de cliente.
+
+CategorySeeder.php: Crea 3 categorías base.
+
+ProductSeeder.php: Crea 10 productos con datos generados por ProductFactory.
+
+
+**Datos Generados por los Seeders**
+
+- 2 Usuarios Admin
+
+- 2 Usuarios Cliente
+
+- 3 Categorías (asignadas aleatoriamente a productos)
+
+**10 Productos:**
+
+- Nombre y descripción generados con Faker.
+
+- Existencias entre 6 y 9 unidades.
+
+- Precios entre 30 y 60.
+
+- Imagen por defecto: images/products/default.jpg.
+
+- Categoría aleatoria entre las 3 existentes.
+
+Validación Manual
+
+Se realizaron las siguientes pruebas para verificar la correcta funcionalidad de los datos generados:
+
+- Visualización de productos: Se accedió a la página de productos y se muestran correctamente los 10 productos creados con sus respectivas categorías.
+
+- Login funcional: El inicio de sesión funciona correctamente tanto para usuarios Admin como Cliente creados desde el seeder.
+
+Restricción por roles:
+
+- El usuario Admin puede acceder sin problemas a la ruta de gestión de productos.
+
+- El usuario Cliente al intentar acceder a esa misma ruta recibe un error apropiado, lo que confirma que la protección por rol se encuentra activa.
+
+## Capturas de pantalla
+
+Tabla Product en la base de datos
+
+![tabla Products](C:\laragon\www\cafeteria\images\imagen2.jpg)
+
+Datos de los seeders del listado de productos
+![datos seeders](C:\laragon\www\cafeteria\images\imagen4.jpg)
+
+Seeders que se agregaron y modificaron
+![](C:\laragon\www\cafeteria\images\imagen1.jpg)
+
+Historial de commits
+
+![datos commit](C:\laragon\www\cafeteria\images\imagen3.jpg)
+
