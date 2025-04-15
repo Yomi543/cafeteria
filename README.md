@@ -72,20 +72,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 Se estructuraron y ajustaron los seeders para poblar la base de datos con datos relevantes al funcionamiento de la aplicación. Se crearon/modificaron los siguientes archivos:
 
-AdminSeeder.php: Crea 2 usuarios con rol de administrador.
+AdminSeeder.php: Se crearon 2 usuarios con rol de administrador.
 
-ClientSeeder.php: Crea 2 usuarios con rol de cliente.
+ClientSeeder.php: Se crearon 3 usuarios con rol de cliente.
 
-CategorySeeder.php: Crea 3 categorías base.
+CategorySeeder.php: Hay 3 categorías base.
 
-ProductSeeder.php: Crea 10 productos con datos generados por ProductFactory.
+ProductSeeder.php: Crea 10 productos con datos falsos.
 
 
 **Datos Generados por los Seeders**
 
 - 2 Usuarios Admin
 
-- 2 Usuarios Cliente
+- 3 Usuarios Cliente
 
 - 3 Categorías (asignadas aleatoriamente a productos)
 
@@ -119,17 +119,18 @@ Restricción por roles:
 
 Tabla Product en la base de datos
 
-![tabla Products](C:\laragon\www\cafeteria\images\imagen2.jpg)
+<img src="images/imagen2.jpg" width="600" alt="Productos listados">
 
 Datos de los seeders del listado de productos
-![datos seeders](C:\laragon\www\cafeteria\images\imagen4.jpg)
+<img src="images/imagen4.jpg" width="600" alt="Productos listados">
+
 
 Seeders que se agregaron y modificaron
-![](C:\laragon\www\cafeteria\images\imagen1.jpg)
+<img src="images/imagen1.jpg" width="600" alt="Productos listados">
 
 Historial de commits
 
-![datos commit](C:\laragon\www\cafeteria\images\imagen6.jpg)
-![datos commit](C:\laragon\www\cafeteria\images\imagen5.jpg)
+<img src="images/imagen5.jpg" width="600" alt="Productos listados">
+<img src="images/imagen6.jpg" width="600" alt="Productos listados">
 
 
