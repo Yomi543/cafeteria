@@ -129,5 +129,7 @@ Seeders que se agregaron y modificaron
 
 Historial de commits
 
-![datos commit](C:\laragon\www\cafeteria\images\imagen3.jpg)
+![datos commit](C:\laragon\www\cafeteria\images\imagen6.jpg)
+![datos commit](C:\laragon\www\cafeteria\images\imagen5.jpg)
+
 
